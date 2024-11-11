@@ -16,10 +16,13 @@ import Uncont2 from "./Uncont2.js";
 import Routing from "./Routing.js";
 import Routing1 from "./Routing1.js";
 import GetData from "./GetData.js";
+import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <div>
-    <Routing1></Routing1>
+   <BrowserRouter>
+   <Routing1></Routing1>
+   </BrowserRouter>
     </div>
   );
 }

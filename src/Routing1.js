@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter,Link, Route, Routes } from 'react-router-dom';
 import Electronics from './Electronics';
 import Jwellery from './Jwellery';
 import Men from './Men';
@@ -13,19 +13,19 @@ function Routing1() {
     <>
       <Navbar bg="secondary" data-bs-theme="dark">
         <Container>
-          <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/electronics">Electronics</Nav.Link>
-            <Nav.Link href="/jwellery">Jwellery</Nav.Link>
-            <Nav.Link href="/men ">Men Cloths</Nav.Link>
-            <Nav.Link href="/women ">Women Cloths</Nav.Link>
-            <Nav.Link><Button variant="primary">Login</Button></Nav.Link>
-            <Nav.Link> <Button variant="primary">Ragister</Button></Nav.Link>
+        
+            <Link to="/">Home</Link>
+            <Link to="/electronics">Electronics</Link>
+            <Link to="/jwellery">Jwellery</Link>
+            <Link to="/men ">Men Cloths</Link>
+            <Link to="/women ">Women Cloths</Link>
+            <Link><Button variant="primary">Login</Button></Link>
+            <Link> <Button variant="primary">Ragister</Button></Link>
            
-          </Nav>
+         
         </Container>
       </Navbar>
-      <BrowserRouter>
+    
                 <Routes>
                     <Route path="/" Component={GetData}></Route>
                     <Route path="/electronics" Component={Electronics}></Route>
@@ -33,7 +33,7 @@ function Routing1() {
                     <Route path="/men" Component={Men}></Route>
                     <Route path="/women" Component={Women}></Route>
                 </Routes>
-        </BrowserRouter>
+       
       </>
       
   );
